@@ -56,7 +56,7 @@ const fadeInAnimationdelay2 = {
     y: 0,
     transition: {
       duration: 0.8,
-      delay: 1,
+      delay: 0.7,
       ease: "easeInOut",
     },
   },
@@ -135,7 +135,7 @@ export default function HeroSection() {
           </div>
           <div className="flex items-center justify-center mt-2 text-lg font-normal ">
             <motion.button
-              variants={fadeInAnimationdelay}
+              variants={fadeInAnimationdelay2}
               initial="initial"
               whileInView="animate"
               delay={1}
