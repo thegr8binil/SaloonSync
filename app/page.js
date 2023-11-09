@@ -4,6 +4,8 @@ import Features from "@/components/Features"
 import MFeatures from "@/components/MFeatures"
 import { Bar } from "@/components/Bar"
 import M2Features from "@/components/M2Features"
+import Footer from "@/components/Footer"
+import Cta from "@/components/Cta"
 export default function Home() {
   return (
    <main className="flex items-center justify-center flex-col gap-14">
@@ -13,6 +15,8 @@ export default function Home() {
     <MFeatures/>
     <Bar/>
     <M2Features/>
+    <Cta/>
+    <Footer/>
    </main>
   )
 }
