@@ -1,7 +1,10 @@
-import Image from 'next/image'
-
+import NavBar from "@/components/NavBar"
+import HeroSection from "@/components/HeroSection"
 export default function Home() {
   return (
-   <main></main>
+   <main className="flex items-center justify-center flex-col">
+    <NavBar/>
+    <HeroSection/>
+   </main>
   )
 }
