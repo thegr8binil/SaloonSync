@@ -1,11 +1,12 @@
 "use client";
+import Image from "next/image";
 import Modal from "@/components/Modal";
 import { Clash } from "@/app/layout";
 import { motion } from "framer-motion";
 const fadeInAnimation = {
   initial: {
     opacity: 0,
-    y: 100,
+    y: -50,
   },
   animate: {
     opacity: 1,
@@ -19,7 +20,7 @@ const fadeInAnimation = {
 const fadeInAnimationdelay = {
   initial: {
     opacity: 0,
-    y: 100,
+    y: -25,
   },
   animate: {
     opacity: 1,
@@ -33,14 +34,49 @@ const fadeInAnimationdelay = {
 const fadeInAnimationdelay1 = {
   initial: {
     opacity: 0,
-    y: 100,
+    y: -20,
   },
   animate: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1,
+      duration: 0.8,
+      delay: 0.5,
       ease: "easeInOut",
+    },
+  },
+};
+const fadeInAnimationdelay2 = {
+  initial: {
+    opacity: 0,
+    y: -20,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      delay: 1,
+      ease: "easeInOut",
+    },
+  },
+};
+const boxShadowAnimation = {
+  initial: {
+    boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)",
+  },
+  animate: {
+    boxShadow: [
+      "0 0 20px rgba(94, 106, 210, 0.5)", // Changed color to 5E6AD2
+      "0 0 30px rgba(94, 106, 210, 0.7)", // Increased spread
+      "0 0 40px rgba(94, 106, 210, 1)", // Increased spread
+      "0 0 30px rgba(94, 106, 210, 0.7)", // Increased spread
+      "0 0 20px rgba(94, 106, 210, 0.5)", // Increased spread
+    ],
+    transition: {
+      duration: 2,
+      repeat: Infinity,
+      repeatType: "loop",
     },
   },
 };
@@ -63,25 +99,49 @@ export default function HeroSection() {
     <main className="relative max-w-11xl">
       <div className="flex flex-col gap-4 p-5 mt-2 text-2xl font-semibold sm:flex-row-reverse sm:items-center md:text-3xl lg:text-4xl lg:mt-14 xl:text-5xl 2xl:text-7xl">
         <div className="flex flex-col items-center justify-center sm:ml-4">
-          <h1
+          <motion.h1
+            variants={fadeInAnimation}
+            initial="initial"
+            whileInView="animate"
+            delay={1}
+            viewport={{ once: true }}
             className={`${Clash.className} text-lg sm:text-3xl mt-4 md:text-4xl lg:text-5xl xl:text-6xl text-themeblue`}
           >
             Streamline Your Salon Operations
-          </h1>
-          <h1
+          </motion.h1>
+          <motion.h1
+            variants={fadeInAnimationdelay}
+            initial="initial"
+            whileInView="animate"
+            delay={1}
+            viewport={{ once: true }}
             className={`${Clash.className} text-lg sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-themeblue`}
           >
             Our Comprehensive ERP Software
-          </h1>
-         <div className="flex items-center justify-center">
-         <p className="max-w-md mt-3 text-xs font-medium text-center sm:text-md md:text-lg text-slate-700">
-            Form tracking inventory to monitoring employee performance and
-            analyzing sales data, there's always something to keep you on your
-            toes.
-          </p>
-         </div>
+          </motion.h1>
+          <div className="flex items-center justify-center">
+            <motion.p
+              variants={fadeInAnimationdelay1}
+              initial="initial"
+              whileInView="animate"
+              delay={1}
+              viewport={{ once: true }}
+              className="max-w-md mt-4 text-xs font-medium text-center sm:text-md md:text-lg text-slate-700"
+            >
+              Form tracking inventory to monitoring employee performance and
+              analyzing sales data, there's always something to keep you on your
+              toes.
+            </motion.p>
+          </div>
           <div className="flex items-center justify-center mt-2 text-lg font-normal ">
-            <button className="flex items-center justify-center p-2 mt-2 text-sm font-light text-white transition-transform duration-300 ease-in-out transform rounded-full bg-violet-500 sm:text-lg hover:bg-violet-600 hover:text-white hover:ring-4 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">
+            <motion.button
+              variants={fadeInAnimationdelay}
+              initial="initial"
+              whileInView="animate"
+              delay={1}
+              viewport={{ once: true }}
+              className="flex items-center justify-center p-2 mt-3 text-sm font-light text-white transition-transform duration-300 ease-in-out transform rounded-full bg-violet-500 sm:text-lg hover:bg-violet-600 hover:text-white hover:ring-4 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50"
+            >
               Get started
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -95,8 +155,18 @@ export default function HeroSection() {
                   fill="white"
                 />
               </svg>
-            </button>
+            </motion.button>
           </div>
+          <motion.img
+            variants={boxShadowAnimation}
+            initial="initial"
+            whileInView="animate"
+            delay={1}
+            viewport={{ once: true }}
+            src="/hero.png"
+            alt="ERP Screens"
+            className="h-auto p-5 w-ful mt-7"
+          />
         </div>
       </div>
     </main>
