@@ -157,6 +157,12 @@ export default function HeroSection() {
               </svg>
             </motion.button>
           </div>
+          <motion.div
+            variants={fadeInAnimationdelay2}
+            initial="initial"
+            whileInView="animate"
+            delay={1}
+            viewport={{ once: true }}>
           <motion.img
             variants={boxShadowAnimation}
             initial="initial"
@@ -167,7 +173,8 @@ export default function HeroSection() {
             alt="ERP Screens"
             className="h-auto p-5 w-ful mt-7"
           />
-        </div>
+        </motion.div>
+          </div>
       </div>
     </main>
   );
