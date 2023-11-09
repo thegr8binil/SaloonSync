@@ -58,7 +58,7 @@ const ScaleinAnimation = {
 };
 export default function Features() {
   return (
-    <main className="max-w-11xl p-5 flex flex-col lg:flex-row gap-2">
+    <main className="max-w-10xl p-5 flex flex-col lg:flex-row gap-2">
       <motion.div
         className="flex gap-3 border-2 border-slate-300 p-5 rounded-3xl"
         variants={fadeInAnimation}
