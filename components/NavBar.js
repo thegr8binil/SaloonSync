@@ -2,7 +2,7 @@ import { Orb } from "@/app/layout";
 import Modal from "@/components/Modal";
 const navBar = () => {
   return (
-    <main className="p-4 flex items-center justify-between text-sm sm:text-md md:text-xl max-w-11xl w-screen border-b border-slate-400">
+    <main className="py-4 px-2 flex items-center justify-between text-sm sm:text-md md:text-xl max-w-11xl w-screen border-b border-slate-400">
       <div className="flex items-center gap-1 pl-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
