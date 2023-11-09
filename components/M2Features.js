@@ -63,7 +63,7 @@ const M2Features = () => {
               Get  Detailed  Decisions <br />
             </motion.h1>
             <motion.p
-              className="text-lg text-slate-600 text-center"
+              className="text-lg text-slate-600 text-center pb-4"
               variants={fadeInAnimationdelay}
               initial="initial"
               whileInView="animate"
@@ -107,7 +107,7 @@ const M2Features = () => {
               Scale your Busines <br />
             </motion.h1>
             <motion.p
-              className="text-lg text-slate-600 text-center"
+              className="text-lg text-slate-600 text-center pb-4"
               variants={fadeInAnimationdelay}
               initial="initial"
               whileInView="animate"
