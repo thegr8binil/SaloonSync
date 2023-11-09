@@ -80,6 +80,7 @@ const boxShadowAnimation = {
     },
   },
 };
+
 const ScaleinAnimation = {
   initial: {
     opacity: 0,
