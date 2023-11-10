@@ -32,7 +32,7 @@ const fadeInAnimation = {
 
 const MFeatures = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-4  w-full items-center justify-center max-w-10xl flex-grow">
+    <div className="flex flex-col md:flex-row gap-4  w-full items-center justify-center max-w-10xl flex-grow px-4">
      <motion.main
         className="flex-col items-center flex-grow justify-center gap-4 px-5   xl:gap-48 border-2 border-slate-400 rounded-2xl"
         variants={fadeInAnimationdelay}
