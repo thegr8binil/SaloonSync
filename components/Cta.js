@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const fadeInAnimationdelay2 = {
   initial: {
     opacity: 0,
-    y: 20,
+    y: 10,
   },
   animate: {
     opacity: 1,
@@ -29,6 +29,7 @@ const fadeInAnimationdelay = {
     },
   },
 };
+
 const Cta = () => {
   return (
     <div className="flex items-center justify-center flex-col">
