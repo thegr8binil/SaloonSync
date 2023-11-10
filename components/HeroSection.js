@@ -49,7 +49,7 @@ const fadeInAnimationdelay1 = {
 const fadeInAnimationdelay2 = {
   initial: {
     opacity: 0,
-    y: -20,
+    y: 0,
   },
   animate: {
     opacity: 1,
@@ -57,6 +57,23 @@ const fadeInAnimationdelay2 = {
     transition: {
       duration: 0.8,
       delay: 0.7,
+      ease: "easeInOut",
+    },
+  },
+};
+const fadeInAnimationdelay3 = {
+  initial: {
+    opacity: 0,
+    y: -20,
+    scale: 0.6,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 1.2,
+      delay: 1,
       ease: "easeInOut",
     },
   },
@@ -159,7 +176,7 @@ export default function HeroSection() {
             </motion.button>
           </div>
           <motion.div
-            variants={fadeInAnimationdelay2}
+            variants={fadeInAnimationdelay3}
             initial="initial"
             whileInView="animate"
             delay={1}
